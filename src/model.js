@@ -1,26 +1,45 @@
 import image from './assets/Spb.jpg'
 import {TextBlock, TitleBlock, ImageBlock, TextColumnsBlock} from './classes/blocks'
+import {css} from './utils'
 
-const text = 'JavaScript the best'
+const text = `Frontend-Developers`
 
 export const model = [
-  new TitleBlock('Конструктор сайтов на JavaScript', {
+  new TitleBlock('Санкт-Петербург', {
     tag: 'h2',
-    styles: 'background: linear-gradient(to right, #ff0099, #493240); color: #fff; padding: 1.5rem; text-align: center;'
+    styles: css({
+      background: 'linear-gradient(to top, #0030cce8, #000000e3)',
+      color: '#fff',
+      padding: '1.5rem',
+      'text-align': 'center'
+    })
   }),
   new ImageBlock(image, {
-    styles: 'padding: 2rem 0; display: flex; justify-content: center;',
+    styles: css({
+      padding: '2rem 0',
+      display: 'flex',
+      'justify-content': 'center'
+    }),
     alt: 'my image',
-    imageStyles: 'width: 500px; height: auto;'
+    imageStyles: 'width: 500px; height: auto; border-radius: 10px;'
   }),
   new TextColumnsBlock([
-    'Приложение на JavaScript, без использования библиотек',
-    'Принципы SOLID и ООП в JavaScript',
-    'JavaScript - это просто и интересно'
+    'Санкт-Петербург является крупным туристическим центром Российской Федерации',
+    '10% площади Санкт-Петербурга покрыто водой',
+    'В Санкт-Петербурге насчитывается примерно 100 островов и 800 мостов'
   ], {
-    styles: 'padding: 2rem 0; color: #fff; background: linear-gradient(to bottom, #8e2de2, #4a00e0); font-weight: bold;'
+    styles: css({
+      padding: '2rem 15px',
+      color: '#fff',
+      background: 'linear-gradient(to bottom, #0030cce8, #000000e3)',
+      'font-weight': 'bold'
+    })
   }),
   new TextBlock(text, {
-    styles: 'background: linear-gradient(to left, #f2994a, #f2c94c); font-weight: bold; padding: 1rem;'
+    styles: css({
+      background: 'gray',
+      'font-weight': 'bold',
+      padding: '1rem'
+    })
   })
 ]
